@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { publicationNotice } from '@/data/project';
 
 const assetPrefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
@@ -33,7 +32,7 @@ export default function DemoGallery() {
           {visuals.map((visual) => (
             <figure key={visual.src} className="overflow-hidden rounded-xl border border-slate-200 bg-slate-50 shadow-sm">
               <div className="aspect-[16/10] bg-slate-100">
-                <Image src={visual.src} alt={visual.alt} width={800} height={500} className="h-full w-full object-cover" />
+                <img src={visual.src} alt={visual.alt} width={800} height={500} className="h-full w-full object-cover" />
               </div>
               <figcaption className="p-6">
                 <div className="flex items-center justify-between gap-4">
